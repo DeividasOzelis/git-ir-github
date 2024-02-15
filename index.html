@@ -26,8 +26,36 @@
             <li>clone - clonuoja nurodyta repozitorija is isorines i lokaliagit</li>
             <li>log - isveda commit'u sarasa</li>
             <li>checkout + commitID/branchName - pereina i nurodyta kodo versija ARBA i kita branch'a</li>
-            <li>branch - naujo branch'o sukurimas</li>
+            <li>branch pavadinimas - naujo branch'o sukurimas</li>
+            <li>merge name - sujungia esama saka su nurodyta name</li>
         </ul>
+    </section>
+    <section>
+        <h1>Branch protection rules</h1>
+        <p>
+            Viena svarbiausiu saku apsaugos taisykliu yra 'Pull requests'(bandymas vienos sakos commit'us sukelti i kita saka).<br>
+            Pull request dar galima suteikti 'Pull approvals', kuris reikalauja, kad nurodytas kiekis kitu projekto dalyviu patvirtintu 'Pull request'a'.
+        </p>
+    </section>
+    <section>
+        <h1>Pull request eiliskumas</h1>
+        <ol>
+            <li>Susikrti nauja saka. git branch name</li>
+            <li>Nueiti i ta saka.git checkout branchName</li>
+            <li>Atlikti savo uzduoti savo sakoje.
+                <ol>
+                    <li>Addini pakitusius failus. git add</li>
+                    <li>Commit'ini pakitimus.git commit -m "msg"</li>
+                </ol>
+            </li>
+            <li>Nueini i main/master saka. git checkout main/master</li>
+            <li>Atnaujini main/master saka. git pull</li>
+            <li>Grizti i nauja saka. git checkout newBranch</li>
+            <li>Sujungi savo saka su main ir issprendi galimai atsiradusius konfliktus. git merge main</li>
+            <li>Nusiunti naujos sakos pakeitimus i gtihuba. git push</li>
+            <li>Sukurti githube Pull requesta</li>
+            <li>Kiti komandos nariai patvirtina arba atmeta ta Pull requesta</li>
+        </ol>
     </section>
 </body>
 </html>
